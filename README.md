@@ -27,3 +27,23 @@ The following environment variables are required:
 - BSN_PASSWORD: Your BSN password
 - BSN_NETWORK: Your BSN network
 - BSN_BASE_URL: BSN API base URL
+
+## API Endpoints
+
+### Devices API
+
+Base URL: https://api.bsn.cloud/2020/10/REST/Devices
+
+- GET / - Get all devices
+- GET /{deviceId} - Get device by ID
+
+### RDWS API
+
+Base URL: https://ws.bsn.cloud/rest/v1
+
+- GET /info - Get device information
+- GET /time - Get device time
+- PUT /custom - Send custom command to device
+- GET /download-firmware - Download and apply firmware update
+
+Each endpoint requires proper authentication and follows the BSN.cloud API specifications. See the source code for implementation details and usage examples.
