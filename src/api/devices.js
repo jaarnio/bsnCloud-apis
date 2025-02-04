@@ -1,7 +1,7 @@
 class DevicesAPI {
   constructor(authManager) {
     this.authManager = authManager;
-    this.baseUrl = "https://api.bsn.cloud/2022/06/REST/Devices";
+    this.baseUrl = `${authManager.config.baseUrl}/Devices`;
   }
 
   async getAllDevices() {
