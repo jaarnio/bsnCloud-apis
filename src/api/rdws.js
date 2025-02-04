@@ -72,6 +72,28 @@ class RdwsAPI {
 
     return this.authManager.makeAuthenticatedRequest(options);
   }
+
+  async downloadFirmware(destinationType, destinationName, firmwareUrl) {
+    if (destinationType !== "player") {
+      throw new Error('destinationType must be "player"');
+    }
+
+    const options = {
+      method: "GET",
+      url: `${this.baseUrl}/download-firmware`,
+      headers: {
+        Accept: "application/json, application/vnd.bsn.error+json",
+        "Content-Type": "application/json",
+      },
+      qs: {
+        url: firmwareUrl,
+        destinationType,
+        destinationName,
+      },
+    };
+
+    return this.authManager.makeAuthenticatedRequest(options);
+  }
 }
 
 module.exports = RdwsAPI;
