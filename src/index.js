@@ -18,7 +18,7 @@ async function main() {
     const deviceSerial = "-";
 
     // Download firmware
-    const firmwareUrl =
+    /*     const firmwareUrl =
       "https://bsncloud.s3.amazonaws.com/public/cobra-9.0.189-update.bsfw";
     const firmwareResponse = await client.rdws.downloadFirmware(
       deviceType,
@@ -32,7 +32,7 @@ async function main() {
       if (firmwareResponse.data.result.reboot) {
         console.log("Device will reboot to apply update");
       }
-    }
+    } */
 
     // Get device info using RDWS
     //const deviceInfo = await client.rdws.getInfo(deviceType, deviceSerial);
@@ -43,17 +43,17 @@ async function main() {
     //console.log("Device Time:", deviceTime);
 
     // Send custom command
-    const customResponse = await client.rdws.sendCustomCommand(
+    /*     const customResponse = await client.rdws.sendCustomCommand(
       deviceType,
       deviceSerial,
       "next",
       true
     );
-    console.log("Custom Command Response:", customResponse);
+    console.log("Custom Command Response:", customResponse); */
 
     // Get all devices (using existing devices API)
-    //const devices = await client.devices.getAllDevices();
-    //console.log("Devices:", devices);
+    const devices = await client.devices.getAllDevices();
+    console.log("Devices:", devices);
   } catch (error) {
     console.error("Error:", error);
   }

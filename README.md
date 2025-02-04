@@ -32,7 +32,7 @@ The following environment variables are required:
 
 ### Devices API
 
-Base URL: https://api.bsn.cloud/2020/10/REST/Devices
+Base URL: https://api.bsn.cloud/2022/06/REST/Devices
 
 - GET / - Get all devices
 - GET /{deviceId} - Get device by ID
