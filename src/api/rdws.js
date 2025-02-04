@@ -1,7 +1,7 @@
 class RdwsAPI {
   constructor(authManager) {
     this.authManager = authManager;
-    this.baseUrl = "https://ws.bsn.cloud/rest/v1";
+    this.baseUrl = process.env.BSN_RDWS_URL || "https://ws.bsn.cloud/rest/v1";
   }
 
   async getInfo(destinationType, destinationName) {

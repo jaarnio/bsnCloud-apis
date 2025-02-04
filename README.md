@@ -26,20 +26,21 @@ The following environment variables are required:
 - BSN_USERNAME: Your BSN username
 - BSN_PASSWORD: Your BSN password
 - BSN_NETWORK: Your BSN network
-- BSN_BASE_URL: BSN API base URL
+- BSN_BASE_URL: BSN API base URL (https://api.bsn.cloud/2022/06/REST)
+- BSN_RDWS_URL: BSN RDWS base URL (https://ws.bsn.cloud/rest/v1)
 
 ## API Endpoints
 
 ### Devices API
 
-Base URL: https://api.bsn.cloud/2022/06/REST/Devices
+Base URL: ${BSN_BASE_URL}/Devices
 
 - GET / - Get all devices
 - GET /{deviceId} - Get device by ID
 
 ### RDWS API
 
-Base URL: https://ws.bsn.cloud/rest/v1
+Base URL: ${BSN_RDWS_URL}
 
 - GET /info - Get device information
 - GET /time - Get device time
